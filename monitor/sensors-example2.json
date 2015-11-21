@@ -1,0 +1,23 @@
+{
+    "sensors": [
+        {
+            "type": "Temperature",
+            "location": "Cellar",
+            "server": "owserver",
+            "path": "/26.489A21010000/temperature"
+        },
+        {
+            "type": "Humidity",
+            "location": "Cellar",
+            "server": "owserver",
+            "path": "/26.489A21010000/humidity"
+        }
+
+    ],
+    "servers": [
+        {
+            "host": "www.hiltgen.com",
+            "local_queue": "/data/hiltgen_queue"
+        }
+    ]
+}

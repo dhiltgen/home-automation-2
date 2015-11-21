@@ -1,0 +1,28 @@
+{
+    "sensors": [
+        {
+            "type": "Temperature",
+            "location": "Front",
+            "server": "owserver",
+            "path": "/26.C29821010000/temperature"
+        },
+        {
+            "type": "Humidity",
+            "location": "Front",
+            "server": "owserver",
+            "path": "/26.C29821010000/humidity"
+        },
+        {
+            "type": "Rainfall",
+            "location": "Front",
+            "server": "owserver",
+            "path": "/1D.3ACA0F000000/counters.B"
+        }
+    ],
+    "servers": [
+        {
+            "host": "www.hiltgen.com",
+            "local_queue": "/data/hiltgen_queue"
+        }
+    ]
+}

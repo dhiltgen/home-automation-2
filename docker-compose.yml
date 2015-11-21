@@ -1,0 +1,19 @@
+owserver:
+    image: dhiltgen/rpi-1-wire-server:latest
+    volumes:
+        - ./owfs.conf:/etc/owfs.conf:ro
+        - /dev/bus/usb:/dev/bus/usb
+    restart: always
+    privileged: true
+    ports:
+    - "4304:4304"
+
+monitor:
+    build: monitor
+    links:
+        - owserver:owserver
+    volumes:
+        - ./monitor/sensors.json:/etc/sensors.json:ro
+        - ./data:/data
+    restart: always
+
